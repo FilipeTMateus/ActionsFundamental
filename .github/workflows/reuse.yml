@@ -4,7 +4,7 @@ on: [workflow_call]
 
 jobs:
   call-worflow:
-    uses: ./.github/workflows/resuable.yml
+    uses: ./.github/workflows/reusable.yml
     with:
       who-to-greet: '@FilipeTMateus'
   use-output:
