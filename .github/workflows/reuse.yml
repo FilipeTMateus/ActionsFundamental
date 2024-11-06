@@ -1,0 +1,15 @@
+name: Reuse other workflow
+
+on: [workflow_call]
+
+jobs:
+  call-worflow:
+    uses: ./.github/workflows/resuable.yml
+    with:
+      who-to-greet: '@FilipeTMateus'
+  use-output:
+    needs: call-workflow
+    steps::
+      - run: echo "Time was ${{needs.call-workflow.outputs.current-time}}
+
+      
